@@ -14,22 +14,6 @@
     <diskStore path="java.io.tmpdir/caching-v2"/>
     <cacheManagerEventListenerFactory class="com.onlyu.cachingv2.CachingManagerEventListenerFactory"/>
 
-    <defaultCache
-        maxEntriesLocalHeap="0"
-        maxEntriesLocalDisk="0"
-        eternal="false"
-        diskExpiryThreadIntervalSeconds="300"
-        diskSpoolBufferSizeMB="2048"
-        timeToIdleSeconds="60"
-        timeToLiveSeconds="120"
-        clearOnFlush="true"
-        memoryStoreEvictionPolicy="LRU"
-        transactionalMode="off"
-        overflowToOffHeap="false">
-        <cacheEventListenerFactory class="com.onlyu.cachingv2.CachingEventListenerFactory"/>
-        <persistence strategy="localTempSwap"/>
-    </defaultCache>
-
     <cache
         name="defaultCache"
         maxEntriesLocalHeap="0"
@@ -40,7 +24,7 @@
         timeToIdleSeconds="60"
         timeToLiveSeconds="120"
         clearOnFlush="true"
-        memoryStoreEvictionPolicy="LRU"
+        memoryStoreEvictionPolicy="LFU"
         transactionalMode="off"
         overflowToOffHeap="false">
         <cacheEventListenerFactory class="com.onlyu.cachingv2.CachingEventListenerFactory"/>

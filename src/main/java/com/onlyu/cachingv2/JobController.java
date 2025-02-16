@@ -15,7 +15,9 @@ public class JobController {
 
     private final JobService jobService;
 
-    @Cacheable("jobs")
+    // https://stackoverflow.com/questions/41265266/how-to-solve-inaccessibleobjectexception-unable-to-make-member-accessible-m
+    // https://nipafx.dev/java-modules-reflection-vs-encapsulation/
+    @Cacheable("defaultCache")
     @GetMapping({"", "/"})
     public List<Job> fetch(@RequestParam(name = "id", required = false) String id)
     {
