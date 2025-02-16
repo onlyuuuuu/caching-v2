@@ -17,11 +17,4 @@ public class CachingConfiguration extends CachingConfigurerSupport
             cacheManager.setStoreByValue(false);
         };
     }
-
-    /*@Bean
-    @Override
-    public CacheManager cacheManager()
-    {
-        return new EhCacheCacheManager(net.sf.ehcache.CacheManager.create());
-    }*/
 }
