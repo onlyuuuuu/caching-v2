@@ -7,9 +7,9 @@
          updateCheck="true"
          monitoring="autodetect"
          dynamicConfig="true"
-         maxBytesLocalHeap="1536m"
-         maxBytesLocalOffHeap="2g"
-         maxBytesLocalDisk="2g">
+         maxBytesLocalHeap="2g"
+         maxBytesLocalOffHeap="3g"
+         maxBytesLocalDisk="4g">
 
     <diskStore path="java.io.tmpdir/caching-v2"/>
     <cacheManagerEventListenerFactory class="com.onlyu.cachingv2.CachingManagerEventListenerFactory"/>
